@@ -99,3 +99,115 @@ footer p {
   color: #888888;
   font-size: 0.9rem;
 }
+/* Hamburger Menu */
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  /* Move to left corner */
+  margin-left: 20px;
+  z-index: 20; /* optional spacing from left */
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 30px;
+  background: #00ff88;
+  border-radius: 2px;
+}
+
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .navbar .nav-links {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between; /* logo left, hamburger right if needed */
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .navbar .logo {
+    order: 1; /* keep logo at start */
+  }
+
+  .hamburger {
+    order: 2; 
+     display: flex;/* keep hamburger next */
+  }
+
+  .navbar .nav-links {
+    order: 3; /* menu drops below */
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    margin-top: 0.5rem;
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid #00ff88;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 1.2rem;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: flex-start; /* align items to left */
+    align-items: center;         /* vertically center logo and hamburger */
+    padding: 1rem;
+    gap: 1rem;                   /* space between logo and hamburger */
+  }
+
+  .navbar .logo {
+    order: 1;
+  }
+
+  .hamburger {
+    order: 2;
+    display: flex;               /* show hamburger */
+  }
+
+  .navbar .nav-links {
+    order: 3;                     /* menu drops below logo+hamburger */
+    width: 100%;
+    flex-direction: column;
+    display: none;                /* hidden initially */
+    margin-top: 0.5rem;
+    background: rgba(0,0,0,0.9);
+    border-top: 1px solid #00ff88;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;
+  }
+}
+.hamburger {
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 20;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background: #00ff88; /* bright green */
+  border-radius: 2px;
+}
