@@ -1,0 +1,231 @@
+/* ================= Financial News & Updates ================= */
+
+/* Section Styling */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #00ff88;
+  text-shadow: 0 0 15px rgba(0, 255, 136, 0.25);
+}
+
+/* Filter Buttons */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background: #000000;
+  border: 2px solid #333333;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #cccccc;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: #00ff88;
+  color: #00ff88;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(45deg, #00ff88, #00cc6a);
+  color: #000000;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+/* News Container */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+}
+
+/* News Card */
+.news-item {
+  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  border: 1px solid #333333;
+  border-radius: 18px;
+  padding: 1.8rem;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-item:hover {
+  border-color: #00ff88;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 255, 136, 0.25);
+}
+
+/* Category Badge */
+.news-badge {
+  display: inline-block;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Title */
+.news-item h3 {
+  color: #00ff88;
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.news-item:hover h3 {
+  color: #00cc6a;
+}
+
+/* Meta Info */
+.news-meta {
+  font-size: 0.8rem;
+  color: #888888;
+  margin-bottom: 1rem;
+}
+
+/* Description */
+.news-item p {
+  color: #cccccc;
+  line-height: 1.6;
+  font-size: 1rem;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+/* Read More Link */
+.news-item a {
+  align-self: flex-start;
+  background: linear-gradient(45deg, #00ff88, #00cc6a);
+  color: #000000;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.news-item a:hover {
+  background: linear-gradient(45deg, #00cc6a, #00ff88);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 255, 136, 0.3);
+}
+
+/* Load More Button */
+.load-more-btn {
+  display: block;
+  margin: 2rem auto 0;
+  background: linear-gradient(45deg, #00ff88, #00cc6a);
+  color: #000000;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+.load-more-btn:hover {
+  background: linear-gradient(45deg, #00cc6a, #00ff88);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+}
+
+.load-more-btn.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background: #000000;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 2px solid #00ff88;
+}
+
+footer p {
+  color: #888888;
+  font-size: 0.9rem;
+}
+
+/* ================= Responsive Design ================= */
+@media (max-width: 1024px) {
+  .section {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .filter-container {
+    gap: 0.6rem;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .news-list {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .filter-btn {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+  }
+
+  .news-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .news-item p {
+    font-size: 0.9rem;
+  }
+}

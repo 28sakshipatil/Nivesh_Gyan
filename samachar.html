@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Samachar Hub</title>
+  <link rel="stylesheet" href="common.css">
+   <link rel="stylesheet" href="samachar.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Nivesh Gyan</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gyan.html">Gyan Hub</a></li>
+        <li><a href="abhyas.html">Abhyas Zone</a></li>
+        <li><a href="samachar.html" class="active">Samachar</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+<section class="section">
+    <h2>📰 Financial News & Updates</h2>
+
+    <!-- UPDATED: Filter container with new categories -->
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="finance">Finance</button>
+      <button class="filter-btn" data-filter="guidelines">Guidelines</button>
+      <button class="filter-btn" data-filter="banks">Banks</button>
+      <button class="filter-btn" data-filter="stocks">Stocks</button>
+      <button class="filter-btn" data-filter="investment">Investment</button>
+      <button class="filter-btn" data-filter="crypto">Crypto</button>
+      <button class="filter-btn" data-filter="mutual-funds">Mutual Funds</button>
+      <button class="filter-btn" data-filter="ipo">IPO</button>
+      <button class="filter-btn" data-filter="taxation">Taxation</button>
+      <button class="filter-btn" data-filter="alert">Alerts</button>
+    </div>
+
+    <div id="news-container" class="news-list">
+      <p>Loading news...</p>
+    </div>
+
+    <button id="load-more-btn" class="load-more-btn hidden">Load More</button>
+
+  </section>
+
+  <footer><p>&copy; 2025 Nivesh Gyan. All rights reserved.</p></footer>
+  
+  <script src="samachar.js"></script>
+</body>
+</html>
